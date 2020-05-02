@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="employee" class="com.mylabs.xmlspringcore.example1.beans.Employee" >
+
+        <property name="empId"><value>120</value></property>
+        <property name="empName"><value>Ganitha</value></property>
+        <property name="address" ref="address"/>
+
+    </bean>
+
+    <bean id="address" class="com.mylabs.xmlspringcore.example1.beans.Address" >
+        <constructor-arg name="pin" value="123456"></constructor-arg>
+        <constructor-arg name="streetName" value="mystreet"></constructor-arg>
+        <constructor-arg name="city" value="bangalore"></constructor-arg>
+    </bean>
+
+</beans>

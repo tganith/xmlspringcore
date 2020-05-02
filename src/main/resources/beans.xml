@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="xmlservice" class="com.mylabs.xmlspringcore.example2.XMlServiceImpl" >
+          <property name="xmlDAOImpl" ref="xmlDAOImpl"/>
+    </bean>
+
+    <bean id="xmlDAOImpl" class="com.mylabs.xmlspringcore.example2.XMlDAOImpl">
+        <constructor-arg name="xmlJdbcConnection" ref="xmlJdbcConnection"/>
+    </bean>
+
+    <bean id="xmlJdbcConnection" class="com.mylabs.xmlspringcore.example2.XMlJdbcConnection">
+    </bean>
+
+</beans>
