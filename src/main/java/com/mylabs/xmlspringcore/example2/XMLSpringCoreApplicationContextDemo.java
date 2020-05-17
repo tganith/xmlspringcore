@@ -9,7 +9,9 @@ public class XMLSpringCoreApplicationContextDemo {
 	public static void main(String[] args) {
 
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
-		XMlServiceImpl xMlService = (XMlServiceImpl)applicationContext.getBean("xmlservice");
+		//XMlServiceImpl xMlService = (XMlServiceImpl)applicationContext.getBean("xmlservice");
+
+		applicationContext.getBean("xmlJdbcConnection");
 
 	}
 
